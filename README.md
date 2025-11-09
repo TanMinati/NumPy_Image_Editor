@@ -20,7 +20,7 @@ pip install numpy pillow
 ## 🏁 How to Run
 1. Clone this repo:
 ```bash
-git clone https://github.com/your-username/Numpy_Image_Editor.git
+git clone https://github.com/TanMinati/Numpy_Image_Editor.git
 cd Numpy_Image_Editor
 ```
 2. Run the app:
