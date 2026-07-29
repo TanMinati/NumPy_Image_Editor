@@ -70,11 +70,12 @@ class ImageApp:
             self.display_image(Image.fromarray(self.image_array))
 
     def apply_sepia(self):
-        sepia_matrix = np.array([[0.393, 0.769, 0.189],
-                                [0.349, 0.686, 0.168],
-                                [0.272, 0.534, 0.131]])
-        self.image_array= np.clip(self.image_array @ sepia_matrix.T, 0, 255).astype(np.uint8)
-        self.display_image(Image.fromarray(self.image_array))
+        if self.image_array is not None:
+            sepia_matrix = np.array([[0.393, 0.769, 0.189],
+                                    [0.349, 0.686, 0.168],
+                                    [0.272, 0.534, 0.131]])
+            self.image_array= np.clip(self.image_array @ sepia_matrix.T, 0, 255).astype(np.uint8)
+            self.display_image(Image.fromarray(self.image_array))
 
     def inversion(self):
         if self.image_array is not None:
